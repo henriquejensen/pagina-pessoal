@@ -1,0 +1,49 @@
+#Criando meu blog com Ruby on Rails
+
+Primeiro comando é a criação do projeto rails
+	rails new Blog
+
+O Blog terá Post, logo criaremos o modelo de Post e seu campos
+	
+=>		rails g model Post title:string body:text
+
+Este dara a seguinte saida
+Running via Spring preloader in process 23639
+      invoke  active_record
+      create    db/migrate/20160921215720_create_posts.rb
+      create    app/models/post.rb
+      invoke    test_unit
+      create      test/models/post_test.rb
+      create      test/fixtures/posts.yml
+
+Ele cria o arquivo migrate, local onde estão definidos a tabela e os campos do nosso modelo, logo temos que rodar o comando rails migrate para criarmos ela no nosso banco
+
+=>		rake db:migrate
+
+# Instalando simple-form e bootstrap-sass
+
+Adicione as seguintes gems ao Gemfile
+
+=>		gem 'simple_form', '~> 3.2'
+			gem 'bootstrap-sass', '~> 3.3'
+
+para o servidor e aplique ao projeto
+
+=>		bundle install
+
+adicione os arquivos do bootstrap ao arquivo app/assets/javascripts/application.js
+
+=>		//= require bootstrap-sprockets
+
+renomeie a extensao do arquivo application.css para application.scss e import os arquivos bootstrap dentro dele
+
+=>		@import "bootstrap-sprockets";
+			@import "bootstrap";
+
+Gere o simple_form pelo comando
+
+=>		rails generate simple_form:install --bootstrap
+
+# Criando o controller para Post, padrao de nome para controller é no plural
+
+=>		rails g controller Posts
