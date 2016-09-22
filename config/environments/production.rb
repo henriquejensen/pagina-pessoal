@@ -75,6 +75,10 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
+  config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += %w( ckeditor/* )
+  config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
