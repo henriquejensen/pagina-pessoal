@@ -12,13 +12,19 @@
       </div>
 
       <div class="text-center">
-        <%= link_to "READ MORE", post_path(post) %>
+        <%= link_to "READ MORE", post_path(post), class: "btn btn-info" %>
       </div>
       <br>
     </div>
     <% end %>
 
-    <%= link_to "Create a New Article", new_post_path, class: "article" %>
+    <div class="col-xs-6 col-md-6 text-center">
+      <%= link_to "Novo Post", new_post_path, class: "btn btn-primary" %>
+    </div>
+    
+    <div class="col-xs-6 col-md-6 text-center">
+      <%= link_to "Home", root_path, class: "btn btn-success" %>
+    </div>
 
   </div>
 </div>
