@@ -47,3 +47,4 @@ Gere o simple_form pelo comando
 # Criando o controller para Post, padrao de nome para controller é no plural
 
 =>		rails g controller Posts
+
