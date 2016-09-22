@@ -1091,3 +1091,20 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 102ms (Views: 99.0ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-09-21 23:31:03 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 98ms (Views: 95.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-21 23:38:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (2195.4ms)
+Completed 200 OK in 2516ms (Views: 2451.0ms | ActiveRecord: 1.0ms)
+
+
