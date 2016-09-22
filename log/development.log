@@ -1435,3 +1435,62 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 109ms (Views: 105.9ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-09-22 01:00:43 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 172ms (Views: 161.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 01:01:18 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2016-09-22 01:01:25 -0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 103ms (Views: 99.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2016-09-22 01:01:27 -0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (8.1ms)
+  Rendered posts/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 87ms (Views: 84.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2016-09-22 01:01:40 -0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KxnX+TNtXMdjl8sl5DLWkw9t6U9uySXJVsNoMtFdKR0s9JH2fPsGMN2EmeSX+nyJvf0ivsVSkUCTfs9s0yMkag==", "post"=>{"title"=>"quarto post", "body"=>"<p>nova configuracao</p>\r\n"}, "commit"=>"Create Post"}
+  [1m[35m (1.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "quarto post"], ["body", "<p>nova configuracao</p>\r\n"], ["created_at", 2016-09-22 04:01:40 UTC], ["updated_at", 2016-09-22 04:01:40 UTC]]
+  [1m[35m (221.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 233ms (ActiveRecord: 222.9ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2016-09-22 01:01:40 -0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-09-22 01:01:46 -0300
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered home/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 102ms (Views: 99.9ms | ActiveRecord: 0.3ms)
+
+
